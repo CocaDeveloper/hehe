@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-barlow;
+}
+
+.menu-text-item {
+    @apply text-white opacity-50 hover:opacity-100 uppercase font-bold leading-[21.79px] tracking-[0.1em] text-right;
+}
+
+.active {
+    @apply opacity-100;
+}
+
+.button-menu {
+    @apply lg:min-w-[132px] px-3 h-[36px] rounded-[33px] flex items-center justify-center gap-3 text-white font-semibold;
+}
+
+.card-starting {
+    @apply flex flex-col justify-center items-center text-center lg:py-5;
+}
+
+.function-item {
+    @apply flex gap-6 pl-5 max-w-[412px] items-center bg-[#FA831580]/[.5] rounded-[10px] border border-[#F9C779];
+}
+
+.function-item-text {
+    @apply font-bebas uppercase text-[36px] leading-[43.2px] tracking-[2px] text-white;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-enter-from {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.input {
+    @apply rounded-[14px] h-[48px] border-white border-[2px] focus:border-[2px] focus:ring-0 focus:border-[#FFBD00] focus:bg-[#FFFAFA] placeholder:text-[#9CA3AF] text-[#fff];
+    background: linear-gradient(90deg, #3C3C3C 0%, #000000 100%);
+}
+
+.input:disabled {
+    @apply bg-[#F3F4F6] text-[#9CA3AF] cursor-not-allowed border-[#E5E7EB];
+}
+
+.primary-button{
+    @apply inline-flex
+    items-center
+    rounded-[14px]
+    border-[2px]
+    border-white
+    px-4
+    h-[48px]
+    uppercase
+    transition
+    duration-150
+    ease-in-out
+    focus:ring-indigo-500
+    focus:ring-offset-2
+    disabled:cursor-not-allowed;
+    background: linear-gradient(90deg, #F9B701 0%, #FF9F29 100%);
+    transition: all 0.4s ease;
+}
+
+.primary-button:hover:not(:disabled):not(.secondary-button) {
+    background: linear-gradient(90deg, #FFCA2C 0%, #FF8C00 100%);
+    box-shadow: 0 0 18px rgba(255, 159, 41, 0.5);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.primary-button:focus:not(:disabled),
+.primary-button:active:not(:disabled) {
+    background: linear-gradient(90deg, #E59400 0%, #BA7800 100%);
+}
+
+.primary-button:disabled {
+    background: linear-gradient(90deg, rgba(249, 183, 1, 0.6) 0%, rgba(255, 159, 41, 0.6) 100%);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.secondary-button{
+    background: #374151 !important;
+}
+
+.checkbox {
+    @apply rounded w-5 h-5 border-none outline-none focus:border-none focus:ring-0 focus:outline-none text-[#FFA500] focus:text-[#FFA500]
+}
+
+.manager-account-item{
+    @apply lg:h-[50px] h-[40px] bg-[#374151] hover:bg-[#646D7B] lg:gap-5 cursor-pointer flex items-center rounded-[26px] mt-3;
+
+    img {
+        @apply w-[24px] mx-5;
+    }
+
+    span {
+        @apply font-bebas text-[20px] leading-[26px] text-white;
+        flex-grow: 1;
+    }
+}
+
+.manager-account-active {
+    @apply bg-[#FA8315] hover:bg-[#FA8315] border-[1px] border-[#F9C779];
+}
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: all 0.5s ease;
+}
+
+.fade-slide-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.fade-slide-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.hide-bg{
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}
+
+.scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+.secondary-gradient {
+    background: linear-gradient(90deg, #3C3C3C 0%, #000000 100%) !important;
+    transition: all 0.4s ease;
+}
+
+.secondary-gradient:hover {
+    background: linear-gradient(90deg, #4A4A4A 0%, #1A1A1A 100%) !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+}
+
+.info-gradient {
+    background: linear-gradient(180deg, #FFBD00 0%, #8D4E00 100%);
+}
+
+.shop-gradient {
+    background: linear-gradient(180deg, #393939 0%, #1E1E1E 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
